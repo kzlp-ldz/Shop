@@ -9,5 +9,6 @@ namespace Shop
     internal class bd_connection
     {
         public static ShopEntities shop = new ShopEntities();
+        public static User user = new User();
     }
 }

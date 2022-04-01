@@ -25,6 +25,7 @@ namespace Shop
         public AuthorizationPage()
         {
             InitializeComponent();
+            login_tbx.Text = Properties.Settings.Default.Login;
         }
 
         private void auto_btn_Click(object sender, RoutedEventArgs e)
@@ -32,9 +33,24 @@ namespace Shop
             users = new ObservableCollection<User>(bd_connection.shop.User.ToList());
             var k = users.Where(a => a.Login == login_tbx.Text && a.Password == password_tbx.Password).FirstOrDefault();
             if (k != null)
-                NavigationService.Navigate(new AuthorizationPage());
+            {
+                if (safe_chbx.IsChecked.GetValueOrDefault())
+                {
+                    Properties.Settings.Default.Login = login_tbx.Text;
+                    Properties.Settings.Default.Save();
+                }
+                else
+                {
+                    Properties.Settings.Default.Login = null;
+                    Properties.Settings.Default.Save();
+                }
+                //NavigationService.Navigate(new AuthorizationPage());
+            }
+
             else
                 MessageBox.Show("Логин или пароль введены неверно", "error", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            
         }
     }
 }

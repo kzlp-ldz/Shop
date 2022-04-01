@@ -33,5 +33,6 @@
         <PasswordBox x:Name="password_tbx" Grid.Column="1" Grid.Row="5" Margin="10, 0, 10, 0" Grid.ColumnSpan="2" FontSize="24" Background="#FAB7A4" Foreground="#AD7261"/>
         <Button x:Name="auto_btn" Grid.Column="1" Grid.Row="7" Margin="10, 0, 10, 0" FontSize="24"  Background="#FAB7A4" Foreground="#AD7261" Content="Войти" Click="auto_btn_Click"/>
         <Button x:Name="reg_btn" Grid.Column="2" Grid.Row="7" Margin="10, 0, 10, 0" FontSize="24" Background="#FAB7A4" Foreground="#AD7261" Content="Регистрация"/>
+        <CheckBox x:Name="safe_chbx" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Content="Запомнить данные" FontSize="24" Background="#FAB7A4" Foreground="#AD7261" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
     </Grid>
 </Page>
