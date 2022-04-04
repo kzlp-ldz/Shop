@@ -23,3 +23,5 @@ C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\Shop.csproj.CoreCompileInputs.ca
 C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\Shop.csproj.CopyComplete
 C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\Shop.exe
 C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\Shop.pdb
+C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\RegistrationPage.g.cs
+C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\RegistrationPage.baml

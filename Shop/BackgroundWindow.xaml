@@ -6,8 +6,22 @@
         xmlns:local="clr-namespace:Shop"
         mc:Ignorable="d"
         Title="BackgroundWindow" Height="450" Width="800"
-        FontFamily="Arial" >
+        FontFamily="Arial" 
+        Background="#FFCFC2"
+        Foreground="#AD7261">
     <Grid>
-        <Frame x:Name="frame_auto_reg" NavigationUIVisibility="Hidden" Background="#FFCFC2"/>
+        <Rectangle  Fill="#FFCFC2"></Rectangle>
+        <StackPanel  Orientation="Horizontal" VerticalAlignment="Top">
+            <Image Source="/Images/logo.jpg" OpacityMask="#FFCFC2" Width="55" Margin="10" Height="55"></Image>
+            
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Button Width="55"  Content="Назад" Margin="10" Height="30" Name="BackBtn" Click="BackBtn_Click"></Button>
+            <Button  Width="55" Content="Вперед" Margin="10"  Height="30"  Name="ForwardBtn" Click="ForwardBtn_Click"></Button>
+        </StackPanel>
+
+        <Frame x:Name="frame_auto_reg" NavigationUIVisibility="Hidden"/>
+       
+        
     </Grid>
 </Window>

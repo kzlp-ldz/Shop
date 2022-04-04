@@ -25,5 +25,14 @@ namespace Shop
             InitializeComponent();
             frame_auto_reg.NavigationService.Navigate(new AuthorizationPage());
         }
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (frame_auto_reg.CanGoBack) frame_auto_reg.GoBack();
+        }
+
+        private void ForwardBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (frame_auto_reg.CanGoForward) frame_auto_reg.GoForward();
+        }
     }
 }

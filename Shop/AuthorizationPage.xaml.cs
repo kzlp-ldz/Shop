@@ -52,5 +52,10 @@ namespace Shop
 
             
         }
+
+        private void reg_btn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new RegistrationPage());
+        }
     }
 }
