@@ -25,3 +25,9 @@ C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\Shop.exe
 C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\Shop.pdb
 C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\RegistrationPage.g.cs
 C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\RegistrationPage.baml
+C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\ProductPage.g.cs
+C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\ProductPage.baml
+C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\AddPage.g.cs
+C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\AddPage.baml
+C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\EditPage.g.cs
+C:\Users\chudo\source\repos\Shop\Shop\obj\Debug\EditPage.baml
