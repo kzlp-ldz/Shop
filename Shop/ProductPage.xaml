@@ -22,6 +22,27 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" >
             <StackPanel>
+                <StackPanel HorizontalAlignment="Center"  Orientation="Horizontal">
+                    <ComboBox  Width="50" Margin="10" Name="SortCount" SelectionChanged="SortCount_SelectionChanged">
+                        <ComboBoxItem  Selected="ComboBoxItem_Selected" Content="Все" ></ComboBoxItem>
+                        <ComboBoxItem Selected="ComboBoxItem_Selected" Content="2" ></ComboBoxItem>
+                        <ComboBoxItem  Selected="ComboBoxItem_Selected" Content="3"></ComboBoxItem>
+                        <ComboBoxItem Selected="ComboBoxItem_Selected" Content="4"></ComboBoxItem>
+                    </ComboBox>
+                    <TextBox Height="25" Width="150"  x:Name="SearchNameDescTb" TextChanged="SearchNameDescTb_TextChanged"></TextBox>
+                    <ComboBox Margin="10 0" Height="25" Width="150" x:Name="UnitCb" SelectionChanged="UnitCb_SelectionChanged"></ComboBox>
+                    <ComboBox Height="25" Text="Dfvvcv" x:Name="DateCb" Width="100" SelectionChanged="DateCb_SelectionChanged">
+                        <ComboBoxItem Content="Сбросить"></ComboBoxItem>
+                        <ComboBoxItem Content="По возрастанию"></ComboBoxItem>
+                        <ComboBoxItem Content="По убыванию"></ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Height="25"  Margin="10 0" x:Name="AlfCb" Width="100" SelectionChanged="AlfCb_SelectionChanged">
+                        <ComboBoxItem Content="Сбросить"></ComboBoxItem>
+                        <ComboBoxItem Content="от А до Я"></ComboBoxItem>
+                        <ComboBoxItem Content="от Я до А"></ComboBoxItem>
+                    </ComboBox>
+                    <Button Height="25" x:Name="DateMounthBtn" Click="DateMounthBtn_Click">Дата текущего месяца</Button>
+                </StackPanel>
                 <DataGrid Height="264" AutoGenerateColumns="False" Name="ProductList" Background="#FAB7A4" Foreground="#AD7261" SelectionChanged="ProductList_SelectionChanged">
                     <DataGrid.Columns>
 
@@ -40,13 +61,13 @@
                         <DataGridTextColumn Header="Ед.измерения" Binding="{Binding Unit.Name}"></DataGridTextColumn>
                         <DataGridTextColumn Header="Дата добавления" Binding="{Binding AddDate , StringFormat ='dd.MM.yy'}"></DataGridTextColumn>
 
-                        <DataGridTemplateColumn Header="Страна">
+                        <DataGridTemplateColumn x:Name="lv_country" Header="Страна">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <ListView ItemsSource="{ Binding ProductCountry}">
+                                    <ListView  ItemsSource="{ Binding ProductCountry}">
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
-                                                <Label Height="30"  Content="{Binding Country.Name}" Background="{Binding Country.Color}"></Label>
+                                                <Label x:Name="lb_country" Height="30"  Content="{Binding Country.Name}" Background="{Binding Country.Color}"></Label>
                                             </DataTemplate>
                                         </ListView.ItemTemplate>
                                     </ListView>
@@ -59,9 +80,12 @@
             </StackPanel>
         </StackPanel>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2">
+            <Button Margin="5" Content="&lt;" Width="40"  Name="BackListBtn" Click="BackListBtn_Click"></Button>
+           
             <Button Height="30" x:Name="AddBtnt" Click="AddBtnt_Click" Width="70" Background="#FAB7A4" Foreground="#AD7261" Content="Добавить"/>
             <Button  Height="30" x:Name="EditBtnt" Margin=" 10 0" Click="EditBtnt_Click" Width="70" Background="#FAB7A4" Foreground="#AD7261" Content="Изменить"/>
             <Button  Height="30" x:Name="DelBtnt" Click="DelBtnt_Click" Width="70" Background="#FAB7A4" Foreground="#AD7261" Content="Удалить"/>
+            <Button Margin="5"  Content="&gt;" Width="40" Name="ForwardListBtn" Click="ForwardListBtn_Click"></Button>
         </StackPanel>
 
     </Grid>

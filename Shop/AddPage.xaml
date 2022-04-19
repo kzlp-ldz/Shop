@@ -34,8 +34,8 @@
         <ComboBox x:Name="cbx_unit" Foreground="#AD7261" FontSize="24" Background="#FAB7A4" Margin="0, 10, 0, 10" Grid.Row="3" Grid.Column="1" SelectedItem="{Binding Unit}"/>
         <TextBlock Text="Изображение" Foreground="#AD7261" Grid.Row="4" Grid.Column="0" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Button x:Name="btn_photo" Content="Загрузить" Foreground="#AD7261" Grid.Row="4" Grid.Column="1" Background="#FAB7A4" FontSize="20" Margin="0,10,0,10" Click="btn_photo_Click" />
-        <Image Height="150" x:Name="img_photo" Width="200" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
-        <StackPanel Margin="10" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2">
+        <Image Height="150" x:Name="img_photo" Width="200" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="10,32,0,0" Grid.Row="2"/>
+        <StackPanel Margin="10" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="6">
             <StackPanel  >
                 <Label Name="lb_country" Foreground="#AD7261" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">Страны поставщики</Label>
                 <ListView Visibility="Hidden" x:Name="lv_country" ItemsSource="{Binding ProductCountry}" Width="150" Height="150">
@@ -49,9 +49,9 @@
                 <Button Visibility="Hidden" x:Name="btn_addCountry" Foreground="#AD7261" Background="#FAB7A4" FontSize="20" Content="Добавить срану" Margin="2" Click="btn_addCountry_Click"></Button>
                 <Button Visibility="Hidden" x:Name="btn_delCountry" Foreground="#AD7261" Background="#FAB7A4" FontSize="20" Content="Удалить страну" Margin="2" Click="btn_delCountry_Click"></Button>
             </StackPanel>
-            
+
         </StackPanel>
-        
+
         <Button x:Name="btn_save" Foreground="#AD7261" Background="#FAB7A4" FontSize="20" Content="Сохранить" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" Margin="60, 10, 60, 10" Click="btn_save_Click"></Button>
     </Grid>
 </Page>
