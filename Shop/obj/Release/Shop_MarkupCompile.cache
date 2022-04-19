@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\chudo\source\repos\Shop\Shop\App.xaml
-6-254870661
+9-1278192370
 2-690067875
-30-548582396
+332140387637
 181450923725
-AddPage.xaml;AuthorizationPage.xaml;BackgroundWindow.xaml;EditPage.xaml;ProductPage.xaml;RegistrationPage.xaml;
+AddOrderPage.xaml;AddPage.xaml;AuthorizationPage.xaml;BackgroundWindow.xaml;EditPage.xaml;IntakesPage.xaml;OrderPage.xaml;ProductPage.xaml;RegistrationPage.xaml;
 
 False
 

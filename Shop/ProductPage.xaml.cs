@@ -37,7 +37,7 @@ namespace Shop
 
         private void AddBtnt_Click(object sender, RoutedEventArgs e)
         {
-           if (user.RoleId == 1 || user.RoleId == 2)
+           if (user.RoleId == 1)
                 NavigationService.Navigate(new AddPage());
             else
                 MessageBox.Show("Недостаточно прав");
@@ -48,7 +48,7 @@ namespace Shop
             var isSelected = ProductList.SelectedItem as Product;
 
             if (isSelected != null)
-                if (user.RoleId == 1 || user.RoleId == 2)
+                if (user.RoleId == 1)
                     NavigationService.Navigate(new EditPage(isSelected));
                 else
                     MessageBox.Show("Недостаточно прав");
@@ -184,7 +184,18 @@ namespace Shop
 
         private void btn_Orders_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new OrderPage());
+            if (user.RoleId == 2)
+                NavigationService.Navigate(new OrderPage());
+            else
+                MessageBox.Show("Недостаточно прав");
+        }
+
+        private void btn_Intakes_Click(object sender, RoutedEventArgs e)
+        {
+            if (user.RoleId == 2)
+                NavigationService.Navigate(new IntakesPage());
+            else
+                MessageBox.Show("Недостаточно прав");
         }
     }
 }

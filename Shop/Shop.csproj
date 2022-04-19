@@ -64,6 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddOrderPage.xaml.cs">
+      <DependentUpon>AddOrderPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AddPage.xaml.cs">
       <DependentUpon>AddPage.xaml</DependentUpon>
     </Compile>
@@ -82,6 +85,9 @@
     </Compile>
     <Compile Include="Gender.cs">
       <DependentUpon>ShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IntakesPage.xaml.cs">
+      <DependentUpon>IntakesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Order.cs">
       <DependentUpon>ShopModel.tt</DependentUpon>
@@ -146,6 +152,10 @@
     <Compile Include="Worker.cs">
       <DependentUpon>ShopModel.tt</DependentUpon>
     </Compile>
+    <Page Include="AddOrderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AddPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -167,6 +177,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="EditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IntakesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

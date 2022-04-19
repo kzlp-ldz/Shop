@@ -31,3 +31,9 @@ C:\Users\chudo\source\repos\Shop\Shop\obj\Release\Shop.csproj.CopyComplete
 C:\Users\chudo\source\repos\Shop\Shop\obj\Release\Shop.exe
 C:\Users\chudo\source\repos\Shop\Shop\obj\Release\Shop.pdb
 C:\Users\chudo\source\repos\Shop\Shop\obj\Release\Shop.csproj.AssemblyReference.cache
+C:\Users\chudo\source\repos\Shop\Shop\obj\Release\AddOrderPage.g.cs
+C:\Users\chudo\source\repos\Shop\Shop\obj\Release\IntakesPage.g.cs
+C:\Users\chudo\source\repos\Shop\Shop\obj\Release\OrderPage.g.cs
+C:\Users\chudo\source\repos\Shop\Shop\obj\Release\AddOrderPage.baml
+C:\Users\chudo\source\repos\Shop\Shop\obj\Release\IntakesPage.baml
+C:\Users\chudo\source\repos\Shop\Shop\obj\Release\OrderPage.baml

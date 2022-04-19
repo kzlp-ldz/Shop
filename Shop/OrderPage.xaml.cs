@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 namespace Shop
 {
@@ -20,9 +21,27 @@ namespace Shop
     /// </summary>
     public partial class OrderPage : Page
     {
+        public static ObservableCollection<Order> orders { get; set; }
+        public static ObservableCollection<ProductOrder> Prodorders { get; set; }
+        public Order Order { get; set; }
+        public List<StatusOrder> StatusOrders { get; set; }
+        public List<ProductOrder> ProductOrders { get; set; }
+        public static ObservableCollection<Product> products { get; set; }
+        public static ObservableCollection<StatusOrder> statuses { get; set; }
         public OrderPage()
         {
             InitializeComponent();
+            dgOrders.ItemsSource = new ObservableCollection<Order>(bd_connection.shop.Order);
+        }
+
+        private void btn_Back_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
+
+        private void btn_AddOrd_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("В режиме разработки");
         }
     }
 }
