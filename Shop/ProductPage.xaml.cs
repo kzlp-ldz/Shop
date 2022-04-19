@@ -20,9 +20,11 @@ namespace Shop
     /// </summary>
     public partial class ProductPage : Page
     {
+        
         Product product = new Product();
         public int actualPage;
-        public ProductPage()
+        public static User user;
+        public ProductPage(User z)
         {
             InitializeComponent();
             ProductList.ItemsSource = bd_connection.shop.Product.ToList();
@@ -30,11 +32,15 @@ namespace Shop
             LvUnit.Insert(0, new Unit() { Id = -1, Name = "Все" });
             UnitCb.ItemsSource = LvUnit;
             UnitCb.DisplayMemberPath = "Name";
+            user = z;
         }
 
         private void AddBtnt_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AddPage());
+           if (user.RoleId == 1 || user.RoleId == 2)
+                NavigationService.Navigate(new AddPage());
+            else
+                MessageBox.Show("Недостаточно прав");
         }
 
         private void EditBtnt_Click(object sender, RoutedEventArgs e)
@@ -42,7 +48,10 @@ namespace Shop
             var isSelected = ProductList.SelectedItem as Product;
 
             if (isSelected != null)
-                NavigationService.Navigate(new EditPage(isSelected));
+                if (user.RoleId == 1 || user.RoleId == 2)
+                    NavigationService.Navigate(new EditPage(isSelected));
+                else
+                    MessageBox.Show("Недостаточно прав");
             else
                 MessageBox.Show("Выберите продукт из списка");
         }
@@ -52,15 +61,19 @@ namespace Shop
             var isSelProduct = ProductList.SelectedItem as Product;
             if (isSelProduct != null)
             {
-                var result = MessageBox.Show("Удалить?", "", MessageBoxButton.YesNo);
-                if (result == MessageBoxResult.OK)
+                if (user.RoleId == 1 || user.RoleId == 2)
                 {
-                   
-                    bd_connection.shop.Product.Remove(isSelProduct);
-                    bd_connection.shop.SaveChanges();
-                    ProductList.ItemsSource = bd_connection.shop.Product.ToList();
-                }
+                    var result = MessageBox.Show("Удалить?", "", MessageBoxButton.YesNo);
+                    if (result == MessageBoxResult.OK)
+                    {
 
+                        bd_connection.shop.Product.Remove(isSelProduct);
+                        bd_connection.shop.SaveChanges();
+                        ProductList.ItemsSource = bd_connection.shop.Product.ToList();
+                    }
+                }
+                else
+                    MessageBox.Show("Недостаточно прав");
             }
             else
                 MessageBox.Show("Ничего не выбрано!");

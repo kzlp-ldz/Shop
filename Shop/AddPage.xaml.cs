@@ -61,7 +61,7 @@ namespace Shop
             
             bd_connection.shop.Product.Add(product);
             bd_connection.shop.SaveChanges();
-            NavigationService.Navigate(new ProductPage());
+            NavigationService.GoBack();
 
             btn_addCountry.Visibility = Visibility.Visible;
             btn_delCountry.Visibility = Visibility.Visible;

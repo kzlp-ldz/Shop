@@ -44,7 +44,7 @@ namespace Shop
                     Properties.Settings.Default.Login = null;
                     Properties.Settings.Default.Save();
                 }
-                NavigationService.Navigate(new ProductPage());
+                NavigationService.Navigate(new ProductPage(k));
             }
 
             else
