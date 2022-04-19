@@ -41,7 +41,23 @@ namespace Shop {
     public partial class ProductPage : System.Windows.Controls.Page, System.Windows.Markup.IComponentConnector {
         
         
-        #line 26 "..\..\ProductPage.xaml"
+        #line 24 "..\..\ProductPage.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btn_Orders;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 25 "..\..\ProductPage.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btn_Intakes;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 30 "..\..\ProductPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox SortCount;
         
@@ -49,7 +65,7 @@ namespace Shop {
         #line hidden
         
         
-        #line 32 "..\..\ProductPage.xaml"
+        #line 36 "..\..\ProductPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox SearchNameDescTb;
         
@@ -57,7 +73,7 @@ namespace Shop {
         #line hidden
         
         
-        #line 33 "..\..\ProductPage.xaml"
+        #line 37 "..\..\ProductPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox UnitCb;
         
@@ -65,7 +81,7 @@ namespace Shop {
         #line hidden
         
         
-        #line 34 "..\..\ProductPage.xaml"
+        #line 38 "..\..\ProductPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox DateCb;
         
@@ -73,7 +89,7 @@ namespace Shop {
         #line hidden
         
         
-        #line 39 "..\..\ProductPage.xaml"
+        #line 43 "..\..\ProductPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox AlfCb;
         
@@ -81,7 +97,7 @@ namespace Shop {
         #line hidden
         
         
-        #line 44 "..\..\ProductPage.xaml"
+        #line 48 "..\..\ProductPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button DateMounthBtn;
         
@@ -89,7 +105,7 @@ namespace Shop {
         #line hidden
         
         
-        #line 46 "..\..\ProductPage.xaml"
+        #line 50 "..\..\ProductPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGrid ProductList;
         
@@ -97,7 +113,7 @@ namespace Shop {
         #line hidden
         
         
-        #line 64 "..\..\ProductPage.xaml"
+        #line 68 "..\..\ProductPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGridTemplateColumn lv_country;
         
@@ -105,7 +121,7 @@ namespace Shop {
         #line hidden
         
         
-        #line 83 "..\..\ProductPage.xaml"
+        #line 87 "..\..\ProductPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button BackListBtn;
         
@@ -113,7 +129,7 @@ namespace Shop {
         #line hidden
         
         
-        #line 85 "..\..\ProductPage.xaml"
+        #line 89 "..\..\ProductPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button AddBtnt;
         
@@ -121,7 +137,7 @@ namespace Shop {
         #line hidden
         
         
-        #line 86 "..\..\ProductPage.xaml"
+        #line 90 "..\..\ProductPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button EditBtnt;
         
@@ -129,7 +145,7 @@ namespace Shop {
         #line hidden
         
         
-        #line 87 "..\..\ProductPage.xaml"
+        #line 91 "..\..\ProductPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button DelBtnt;
         
@@ -137,7 +153,7 @@ namespace Shop {
         #line hidden
         
         
-        #line 88 "..\..\ProductPage.xaml"
+        #line 92 "..\..\ProductPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button ForwardListBtn;
         
@@ -175,33 +191,35 @@ namespace Shop {
             switch (connectionId)
             {
             case 1:
-            this.SortCount = ((System.Windows.Controls.ComboBox)(target));
+            this.btn_Orders = ((System.Windows.Controls.Button)(target));
             
-            #line 26 "..\..\ProductPage.xaml"
-            this.SortCount.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.SortCount_SelectionChanged);
+            #line 24 "..\..\ProductPage.xaml"
+            this.btn_Orders.Click += new System.Windows.RoutedEventHandler(this.btn_Orders_Click);
             
             #line default
             #line hidden
             return;
             case 2:
+            this.btn_Intakes = ((System.Windows.Controls.Button)(target));
             
-            #line 27 "..\..\ProductPage.xaml"
-            ((System.Windows.Controls.ComboBoxItem)(target)).Selected += new System.Windows.RoutedEventHandler(this.ComboBoxItem_Selected);
+            #line 25 "..\..\ProductPage.xaml"
+            this.btn_Intakes.Click += new System.Windows.RoutedEventHandler(this.btn_Intakes_Click);
             
             #line default
             #line hidden
             return;
             case 3:
+            this.SortCount = ((System.Windows.Controls.ComboBox)(target));
             
-            #line 28 "..\..\ProductPage.xaml"
-            ((System.Windows.Controls.ComboBoxItem)(target)).Selected += new System.Windows.RoutedEventHandler(this.ComboBoxItem_Selected);
+            #line 30 "..\..\ProductPage.xaml"
+            this.SortCount.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.SortCount_SelectionChanged);
             
             #line default
             #line hidden
             return;
             case 4:
             
-            #line 29 "..\..\ProductPage.xaml"
+            #line 31 "..\..\ProductPage.xaml"
             ((System.Windows.Controls.ComboBoxItem)(target)).Selected += new System.Windows.RoutedEventHandler(this.ComboBoxItem_Selected);
             
             #line default
@@ -209,109 +227,125 @@ namespace Shop {
             return;
             case 5:
             
-            #line 30 "..\..\ProductPage.xaml"
+            #line 32 "..\..\ProductPage.xaml"
             ((System.Windows.Controls.ComboBoxItem)(target)).Selected += new System.Windows.RoutedEventHandler(this.ComboBoxItem_Selected);
             
             #line default
             #line hidden
             return;
             case 6:
-            this.SearchNameDescTb = ((System.Windows.Controls.TextBox)(target));
             
-            #line 32 "..\..\ProductPage.xaml"
-            this.SearchNameDescTb.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.SearchNameDescTb_TextChanged);
+            #line 33 "..\..\ProductPage.xaml"
+            ((System.Windows.Controls.ComboBoxItem)(target)).Selected += new System.Windows.RoutedEventHandler(this.ComboBoxItem_Selected);
             
             #line default
             #line hidden
             return;
             case 7:
-            this.UnitCb = ((System.Windows.Controls.ComboBox)(target));
             
-            #line 33 "..\..\ProductPage.xaml"
-            this.UnitCb.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.UnitCb_SelectionChanged);
+            #line 34 "..\..\ProductPage.xaml"
+            ((System.Windows.Controls.ComboBoxItem)(target)).Selected += new System.Windows.RoutedEventHandler(this.ComboBoxItem_Selected);
             
             #line default
             #line hidden
             return;
             case 8:
-            this.DateCb = ((System.Windows.Controls.ComboBox)(target));
+            this.SearchNameDescTb = ((System.Windows.Controls.TextBox)(target));
             
-            #line 34 "..\..\ProductPage.xaml"
-            this.DateCb.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.DateCb_SelectionChanged);
+            #line 36 "..\..\ProductPage.xaml"
+            this.SearchNameDescTb.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.SearchNameDescTb_TextChanged);
             
             #line default
             #line hidden
             return;
             case 9:
-            this.AlfCb = ((System.Windows.Controls.ComboBox)(target));
+            this.UnitCb = ((System.Windows.Controls.ComboBox)(target));
             
-            #line 39 "..\..\ProductPage.xaml"
-            this.AlfCb.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.AlfCb_SelectionChanged);
+            #line 37 "..\..\ProductPage.xaml"
+            this.UnitCb.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.UnitCb_SelectionChanged);
             
             #line default
             #line hidden
             return;
             case 10:
-            this.DateMounthBtn = ((System.Windows.Controls.Button)(target));
+            this.DateCb = ((System.Windows.Controls.ComboBox)(target));
             
-            #line 44 "..\..\ProductPage.xaml"
-            this.DateMounthBtn.Click += new System.Windows.RoutedEventHandler(this.DateMounthBtn_Click);
+            #line 38 "..\..\ProductPage.xaml"
+            this.DateCb.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.DateCb_SelectionChanged);
             
             #line default
             #line hidden
             return;
             case 11:
-            this.ProductList = ((System.Windows.Controls.DataGrid)(target));
+            this.AlfCb = ((System.Windows.Controls.ComboBox)(target));
             
-            #line 46 "..\..\ProductPage.xaml"
-            this.ProductList.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.ProductList_SelectionChanged);
+            #line 43 "..\..\ProductPage.xaml"
+            this.AlfCb.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.AlfCb_SelectionChanged);
             
             #line default
             #line hidden
             return;
             case 12:
-            this.lv_country = ((System.Windows.Controls.DataGridTemplateColumn)(target));
+            this.DateMounthBtn = ((System.Windows.Controls.Button)(target));
+            
+            #line 48 "..\..\ProductPage.xaml"
+            this.DateMounthBtn.Click += new System.Windows.RoutedEventHandler(this.DateMounthBtn_Click);
+            
+            #line default
+            #line hidden
             return;
             case 13:
-            this.BackListBtn = ((System.Windows.Controls.Button)(target));
+            this.ProductList = ((System.Windows.Controls.DataGrid)(target));
             
-            #line 83 "..\..\ProductPage.xaml"
-            this.BackListBtn.Click += new System.Windows.RoutedEventHandler(this.BackListBtn_Click);
+            #line 50 "..\..\ProductPage.xaml"
+            this.ProductList.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.ProductList_SelectionChanged);
             
             #line default
             #line hidden
             return;
             case 14:
-            this.AddBtnt = ((System.Windows.Controls.Button)(target));
-            
-            #line 85 "..\..\ProductPage.xaml"
-            this.AddBtnt.Click += new System.Windows.RoutedEventHandler(this.AddBtnt_Click);
-            
-            #line default
-            #line hidden
+            this.lv_country = ((System.Windows.Controls.DataGridTemplateColumn)(target));
             return;
             case 15:
-            this.EditBtnt = ((System.Windows.Controls.Button)(target));
+            this.BackListBtn = ((System.Windows.Controls.Button)(target));
             
-            #line 86 "..\..\ProductPage.xaml"
-            this.EditBtnt.Click += new System.Windows.RoutedEventHandler(this.EditBtnt_Click);
+            #line 87 "..\..\ProductPage.xaml"
+            this.BackListBtn.Click += new System.Windows.RoutedEventHandler(this.BackListBtn_Click);
             
             #line default
             #line hidden
             return;
             case 16:
-            this.DelBtnt = ((System.Windows.Controls.Button)(target));
+            this.AddBtnt = ((System.Windows.Controls.Button)(target));
             
-            #line 87 "..\..\ProductPage.xaml"
-            this.DelBtnt.Click += new System.Windows.RoutedEventHandler(this.DelBtnt_Click);
+            #line 89 "..\..\ProductPage.xaml"
+            this.AddBtnt.Click += new System.Windows.RoutedEventHandler(this.AddBtnt_Click);
             
             #line default
             #line hidden
             return;
             case 17:
+            this.EditBtnt = ((System.Windows.Controls.Button)(target));
+            
+            #line 90 "..\..\ProductPage.xaml"
+            this.EditBtnt.Click += new System.Windows.RoutedEventHandler(this.EditBtnt_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 18:
+            this.DelBtnt = ((System.Windows.Controls.Button)(target));
+            
+            #line 91 "..\..\ProductPage.xaml"
+            this.DelBtnt.Click += new System.Windows.RoutedEventHandler(this.DelBtnt_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 19:
             this.ForwardListBtn = ((System.Windows.Controls.Button)(target));
             
-            #line 88 "..\..\ProductPage.xaml"
+            #line 92 "..\..\ProductPage.xaml"
             this.ForwardListBtn.Click += new System.Windows.RoutedEventHandler(this.ForwardListBtn_Click);
             
             #line default

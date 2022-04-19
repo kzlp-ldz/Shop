@@ -181,5 +181,10 @@ namespace Shop
         {
 
         }
+
+        private void btn_Orders_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new OrderPage());
+        }
     }
 }

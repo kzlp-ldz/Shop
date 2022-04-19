@@ -20,6 +20,10 @@
             <RowDefinition Height="8*">
             </RowDefinition>
         </Grid.RowDefinitions>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="btn_Orders" Content="Заказы" Width="70" Height="40" VerticalAlignment="Top" Background="#FAB7A4" Foreground="#AD7261" Click="btn_Orders_Click"/>
+            <Button x:Name="btn_Intakes" Content="Поставки" Width="70" Height="40"  VerticalAlignment="Top" Background="#FAB7A4" Foreground="#AD7261" Click="btn_Intakes_Click"/>
+        </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" >
             <StackPanel>
                 <StackPanel HorizontalAlignment="Center"  Orientation="Horizontal">
