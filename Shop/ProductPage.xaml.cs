@@ -184,8 +184,8 @@ namespace Shop
 
         private void btn_Orders_Click(object sender, RoutedEventArgs e)
         {
-            if (user.RoleId == 2)
-                NavigationService.Navigate(new OrderPage());
+            if (user.RoleId == 2 || user.RoleId == 3)
+                NavigationService.Navigate(new OrderPage(ProductPage.user));
             else
                 MessageBox.Show("Недостаточно прав");
         }

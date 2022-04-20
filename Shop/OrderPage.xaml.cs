@@ -28,7 +28,7 @@ namespace Shop
         public List<ProductOrder> ProductOrders { get; set; }
         public static ObservableCollection<Product> products { get; set; }
         public static ObservableCollection<StatusOrder> statuses { get; set; }
-        public OrderPage()
+        public OrderPage(User user)
         {
             InitializeComponent();
             dgOrders.ItemsSource = new ObservableCollection<Order>(bd_connection.shop.Order);
@@ -41,7 +41,7 @@ namespace Shop
 
         private void btn_AddOrd_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В режиме разработки");
+            NavigationService.Navigate(new AddOrderPage());
         }
     }
 }

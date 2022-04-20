@@ -14,8 +14,6 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -26,47 +24,23 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
+        <Button x:Name="btn_save" Content="Сделать заказ" Grid.Column="3" Grid.Row="0" Height="40" Width="150" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btn_save_Click"/>
 
-        
-
-        <Button x:Name="btn_Back" Content="Назад"  Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom"  Background="#FFAD7261" BorderBrush="{x:Null}" Foreground="White" FontFamily="Arial" Click="btn_Back_Click"/>
-        <Button x:Name="btn_Save" Content="Сохранение"  Grid.Column="1" Grid.Row="0" VerticalAlignment="Top"  Background="#FFAD7261" BorderBrush="{x:Null}" Foreground="White" FontFamily="Arial" Click="btn_Save_Click"/>
-        <TextBlock Text="Дата" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="#FFAD7261" FontFamily="Arial"/>
-        <DatePicker x:Name="dpDate" Grid.Row="0" Grid.Column="3"/>
-        <TextBlock Text="Поставщик" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFAD7261" FontFamily="Arial"/>
-        <ComboBox x:Name="cbSupplier" Width="60" Height="40" Grid.Row="0" Grid.Column="5" ItemsSource="{Binding Suppliers}" >
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Name}"/>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
-        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1" Margin="10">
-            <ComboBox x:Name="cbProduct" ItemsSource="{Binding Products}" SelectedIndex="0">
-                <ComboBox.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding Name}"/>
-                    </DataTemplate>
-                </ComboBox.ItemTemplate>
-            </ComboBox>
-            <Button x:Name="btnAdd" Content="Добавить" Background="#FFAD7261" BorderBrush="{x:Null}" Foreground="White" FontFamily="Arial" Click="btnAdd_Click"/>
-        </StackPanel>
-        <DataGrid  x:Name="gridProducts" Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="6" ItemsSource="{Binding IntakeProducts}">
+        <DataGrid x:Name="dg_newOrder" ItemsSource="{Binding productsOrder}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="5">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="clProduct" Header="Товар" Binding="{Binding Product.Name}"/>
-                <DataGridTextColumn x:Name="clPrice" Header="Цена" Binding="{Binding Product.Price}"/>
-                <DataGridTextColumn x:Name="clCount" Header="Количество" Binding="{Binding Count}"/>
-                <DataGridTextColumn x:Name="clSum" Header="Сумма" Binding="{Binding Sum}"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Product.Name}"/>
+                <DataGridTextColumn Header="Дата заказа" Binding="{Binding Date}"/>
+                <DataGridTextColumn Header="Количество" Binding="{Binding Count}"/>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding Allow}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2">
-            <TextBlock Text="Сумма"  Foreground="#FFAD7261" FontFamily="Arial" />
-            <TextBox x:Name="tbSum" Width="100" IsEnabled="False" Text="0" />
-        </StackPanel>
 
-
+        <ComboBox Name="cb_prod" Grid.Column="0" Grid.Row="7"/>
+        <TextBlock Text="Количество:" Grid.Column="1" Grid.Row="6" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="tb_alown" Grid.Row="7" Grid.Column="1"/>
+        <Button x:Name="btn_prod" Content="Добавить продукт" Grid.Column="2" Grid.Row="7" Click="btn_prod_Click"/>
+        <Button x:Name="btn_del" Content="Удалить продукт" Grid.Column="3" Grid.Row="7"/>
     </Grid>
 </Page>

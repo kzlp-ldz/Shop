@@ -37,3 +37,5 @@ C:\Users\chudo\source\repos\Shop\Shop\obj\Release\OrderPage.g.cs
 C:\Users\chudo\source\repos\Shop\Shop\obj\Release\AddOrderPage.baml
 C:\Users\chudo\source\repos\Shop\Shop\obj\Release\IntakesPage.baml
 C:\Users\chudo\source\repos\Shop\Shop\obj\Release\OrderPage.baml
+C:\Users\chudo\source\repos\Shop\Shop\obj\Release\ProdIntakePage.g.cs
+C:\Users\chudo\source\repos\Shop\Shop\obj\Release\ProdIntakePage.baml
